@@ -11,7 +11,7 @@ const app=express();
 connectDB()
 .then(()=>{
     app.listen(process.env.PORT ||8000,()=>{
-        console.log(`server is runnig on ${process.env.PORT}`)
+        console.log(`server is runnig on PORT ${process.env.PORT}`)
     })
 })
 .catch((error)=>{
