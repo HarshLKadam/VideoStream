@@ -6,7 +6,6 @@ const asyncHandler=(requestHandler)=>{
      
 }
 
-
 export {asyncHandler}
 
 // const asyncHandler=(func)=> { async()=>{ } }

@@ -3,6 +3,7 @@ import cors from 'cors'
 import cookieParser from 'cookie-parser'
 
 const app=express()
+
 app.use(cors(
     {
         origin:process.env.CORS_ORIGIN,
@@ -17,11 +18,16 @@ app.use(cookieParser())
 
 //routes import 
 import userRouter from './routes/user.routes.js'
+
 //routes declaration 
 app.use('/api/v1/users',userRouter)
 
 app.get('/',(req,res)=>{
     res.send("hello")
+})
+
+app.post('/api/v1/users/new',(req,res)=>{
+    res.send("i am trying to post method ")
 })
 
 export default app;
