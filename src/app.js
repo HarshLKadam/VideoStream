@@ -20,14 +20,7 @@ app.use(cookieParser())
 import userRouter from './routes/user.routes.js'
 
 //routes declaration 
-app.use('/api/v1/users',userRouter)
+app.use('/user',userRouter)
 
-app.get('/',(req,res)=>{
-    res.send("hello")
-})
-
-app.post('/api/v1/users/new',(req,res)=>{
-    res.send("i am trying to post method ")
-})
 
 export default app;
